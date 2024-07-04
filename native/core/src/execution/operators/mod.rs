@@ -28,12 +28,6 @@ use arrow_schema::ArrowError;
 use jni::objects::GlobalRef;
 use std::{fmt::Debug, sync::Arc};
 
-mod scan;
-pub use scan::*;
-
-mod copy;
-pub use copy::*;
-
 /// Error returned during executing operators.
 #[derive(thiserror::Error, Debug)]
 pub enum ExecutionError {

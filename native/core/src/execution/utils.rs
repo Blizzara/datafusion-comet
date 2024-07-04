@@ -22,7 +22,7 @@ use arrow::{
     error::ArrowError,
     ffi::{from_ffi, FFI_ArrowArray, FFI_ArrowSchema},
 };
-
+use datafusion_common::DataFusionError;
 /// Utils for array vector, etc.
 use crate::errors::ExpressionError;
 use crate::execution::operators::ExecutionError;
@@ -42,6 +42,24 @@ impl From<ArrowError> for ExpressionError {
 impl From<ExpressionError> for ArrowError {
     fn from(error: ExpressionError) -> ArrowError {
         ArrowError::ComputeError(error.to_string())
+    }
+}
+
+impl From<DataFusionError> for ExecutionError {
+    fn from(value: DataFusionError) -> Self {
+        ExecutionError::DataFusionError(value.message().to_string())
+    }
+}
+
+impl From<ExecutionError> for DataFusionError {
+    fn from(value: ExecutionError) -> Self {
+        DataFusionError::Execution(value.to_string())
+    }
+}
+
+impl From<ExpressionError> for DataFusionError {
+    fn from(value: ExpressionError) -> Self {
+        DataFusionError::Execution(value.to_string())
     }
 }
 
