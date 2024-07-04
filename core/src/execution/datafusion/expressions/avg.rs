@@ -47,10 +47,11 @@ pub struct Avg {
 impl Avg {
     /// Create a new AVG aggregate function
     pub fn new(expr: Arc<dyn PhysicalExpr>, name: impl Into<String>, data_type: DataType) -> Self {
-        let result_data_type = avg_return_type(&data_type).unwrap();
+        let name = name.into();
+        let result_data_type = avg_return_type(&*name, &data_type).unwrap();
 
         Self {
-            name: name.into(),
+            name,
             expr,
             input_data_type: data_type,
             result_data_type,

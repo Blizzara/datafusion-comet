@@ -141,3 +141,12 @@ harness = false
 [[bench]]
 name = "parquet_decode"
 harness = false
+
+
+[patch.crates-io]
+datafusion = { git = "https://github.com/apache/datafusion.git", branch = "main" }
+datafusion-common = { git = "https://github.com/apache/datafusion.git", branch = "main" }
+datafusion-expr = { git = "https://github.com/apache/datafusion.git", branch = "main" }
+datafusion-functions = { git = "https://github.com/apache/datafusion.git", branch = "main" }
+datafusion-physical-expr = { git = "https://github.com/apache/datafusion.git", branch = "main" }
+datafusion-physical-expr-common = { git = "https://github.com/apache/datafusion.git", branch = "main" }

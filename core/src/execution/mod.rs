@@ -17,20 +17,15 @@
 
 //! PoC of vectorization execution through JNI to Rust.
 pub mod datafusion;
-pub mod jni_api;
 
 pub mod kernels; // for benchmarking
 
 mod metrics;
 pub mod operators;
 pub mod serde;
-pub mod shuffle;
 pub(crate) mod sort;
 mod timezone;
 pub(crate) mod utils;
-
-mod memory_pool;
-pub use memory_pool::*;
 
 // Include generated modules from .proto files.
 #[allow(missing_docs)]

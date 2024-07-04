@@ -46,7 +46,6 @@ mod errors;
 pub mod common;
 mod data_type;
 pub mod execution;
-mod jvm_bridge;
 pub mod parquet;
 
 #[cfg(feature = "mimalloc")]
