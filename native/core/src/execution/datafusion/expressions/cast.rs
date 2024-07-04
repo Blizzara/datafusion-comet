@@ -496,7 +496,7 @@ impl Cast {
         }
     }
 
-    fn cast_array(&self, array: ArrayRef) -> DataFusionResult<ArrayRef> {
+    pub fn cast_array(&self, array: ArrayRef) -> DataFusionResult<ArrayRef> {
         let to_type = &self.data_type;
         let array = array_with_timezone(array, self.timezone.clone(), Some(to_type))?;
         let from_type = array.data_type().clone();
