@@ -791,11 +791,12 @@ dependencies = [
 
 [[package]]
 name = "dashmap"
-version = "5.5.3"
+version = "6.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "978747c1d849a7d2ee5e8adc0159961c48fb7e5db2f06af6723b80123bb53856"
+checksum = "804c8821570c3f8b70230c2ba75ffa5c0f9a4189b9a432b6656c536712acae28"
 dependencies = [
  "cfg-if",
+ "crossbeam-utils",
  "hashbrown",
  "lock_api",
  "once_cell",
@@ -805,7 +806,7 @@ dependencies = [
 [[package]]
 name = "datafusion"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -905,7 +906,7 @@ dependencies = [
 [[package]]
 name = "datafusion-common"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -925,7 +926,7 @@ dependencies = [
 [[package]]
 name = "datafusion-common-runtime"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "tokio",
 ]
@@ -933,7 +934,7 @@ dependencies = [
 [[package]]
 name = "datafusion-execution"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "arrow",
  "chrono",
@@ -953,7 +954,7 @@ dependencies = [
 [[package]]
 name = "datafusion-expr"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -971,7 +972,7 @@ dependencies = [
 [[package]]
 name = "datafusion-functions"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "arrow",
  "base64",
@@ -996,7 +997,7 @@ dependencies = [
 [[package]]
 name = "datafusion-functions-aggregate"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -1013,7 +1014,7 @@ dependencies = [
 [[package]]
 name = "datafusion-optimizer"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "arrow",
  "async-trait",
@@ -1032,7 +1033,7 @@ dependencies = [
 [[package]]
 name = "datafusion-physical-expr"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -1061,7 +1062,7 @@ dependencies = [
 [[package]]
 name = "datafusion-physical-expr-common"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -1074,7 +1075,7 @@ dependencies = [
 [[package]]
 name = "datafusion-physical-plan"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "ahash",
  "arrow",
@@ -1107,7 +1108,7 @@ dependencies = [
 [[package]]
 name = "datafusion-sql"
 version = "40.0.0"
-source = "git+https://github.com/apache/datafusion.git?branch=main#4123ad6ca7bb7bdcb4cca65e97d30b4677233de3"
+source = "git+https://github.com/Blizzara/datafusion.git?branch=avo/timestamp-spark-precision#84b6b8332debf67603b79ad1f20c4a07427d29fa"
 dependencies = [
  "arrow",
  "arrow-array",
